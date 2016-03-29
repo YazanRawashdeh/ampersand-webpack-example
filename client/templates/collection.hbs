@@ -1,22 +1,13 @@
  <section class="page pageOne">
-        <h2>Collection demo</h2>
-        <p>Intelligently rendering collections can be a bit tricky.</p>
-        <p>
-            <a href="https://github.com/ampersandjs/ampersand-view">ampersand-view\'s</a>
-        <code>renderCollection()</code> method makes it simple.</p>
-        <p>The only code required to manage the collection is:</p>
-        <pre>
-        <code>this.renderCollection(\n   this.collection, \n   PersonView, \n   this.queryByHook(\'people-list\')\n);</code></pre>
-        <h3>People container:</h3>
+        <h2>POSTS</h2>
+        <h3>POSTS container:</h3>
         <ul class="list-group" data-hook="posts-list"></ul>
         <p>Try it by clicking the buttons</p>
         <div class="buttons btn-group">
             <button class="btn btn-default" data-hook="reset">.reset()</button>
             <button class="btn btn-default" data-hook="fetch">.fetch()</button>
-            <button class="btn btn-default" data-hook=
-            "shuffle">.shuffle()</button> <button class="btn btn-default"
-            data-hook="add">.addRandom()</button><a class="btn btn-default"
-            href="/person/add">Add Person</a>
+            <button class="btn btn-default" data-hook="shuffle">.shuffle()</button>
+            <button class="btn btn-default" data-hook="add">.addRandom()</button>
+            <a class="btn btn-default" href="/person/add">Add Person</a>
         </div>
-        <p>Events are always managed so you don\'t get any leaks.</p>
     </section>

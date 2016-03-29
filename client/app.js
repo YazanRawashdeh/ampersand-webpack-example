@@ -3,9 +3,7 @@ const Router = require('./router');
 
 const MainView = require('./views/main');
 const HomeModel = require('./models/home');
-
-// import "./public/bootstrap.min.css";
-
+window.app = app;
 app.extend({
     router  : new Router(),
     init : function() {
@@ -16,7 +14,7 @@ app.extend({
             el: document.body
         });
         
-        this.router.history.start({ pushState: true });   
+        this.router.history.start({ pushState: false });   
     },
     
     navigate: function(page) {

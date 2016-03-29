@@ -2,6 +2,9 @@ var AmpersandModel = require('ampersand-model');
 
 
 module.exports = AmpersandModel.extend({
+    initialize : function (params) {
+        console.log('this',this);
+    },
     props: {
         userId: 'any',
         id: ['number', true, 0],

@@ -3,15 +3,15 @@ const Router = require('ampersand-router');
 
 const home = require('./pages/home');
 const collection = require('./pages/collection');
-const nested = require('./pages/nested');
-
+const nested = require('./views/parent');
 const Collection = require('./collections/posts');
 
 module.exports = Router.extend ({
     routes: {
         '' : 'home',
         'collection' : 'collection',
-        'nested' : 'nested'
+        'nested' : 'nested',
+        '(*path)': 'catchAll'
     },
     
     home : ()=> {
