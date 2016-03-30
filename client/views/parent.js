@@ -1,20 +1,22 @@
 const base = require('./base');
-// const template = require('../templates/nested.hbs');
+const template = require('../templates/parent.hbs');
 
 const CollapseView = require('../pages/nested');
 const Collection = require('../collections/parent');
 
 module.exports = base.extend({
-    template : "<p data-hook='hiii'></p>",
-    // events : {
-    //     'click [data-hook~=do]' : 'doSomething'
-    // },  
-    initialize : function(){
-        this.collection = new Collection();
-        this.renderWithTemplate();
+    template : template,
+    autoRender : true,
+    binding : {
+        
     },
-    doSomething : function(e){
-        this.renderCollection(this.collection, CollapseView, this.queryByHook('hiii'));
+    render : function(){
+        this.collection = new Collection();
+        this.renderWithTemplate(this);
+        this.doSomething();
+    },
+    doSomething : function(){
+        this.renderCollection(this.collection, CollapseView, this.queryByHook('accordion'));
         if (!this.collection.length) {
             this.collection.fetch();
         }

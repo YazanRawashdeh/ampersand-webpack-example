@@ -9,19 +9,14 @@ module.exports = base.extend({
         'model.body': {
             type: 'attribute',
             hook: 'body',
-            name: 'src'
-        },
-        // 'model.viewUrl': {
-        //     type: 'attribute',
-        //     hook: 'name',
-        //     name: 'href'
-        // }
+            name: 'name'
+        }
     },
-    events: {
-        'click [data-hook~=action-delete]': 'handleRemoveClick'
-    },
-    handleRemoveClick: function () {
-        this.model.destroy();
-        return false;
-    }
+    // events: {
+        //'click [data-hook~=action-delete]': 'handleRemoveClick'
+    // },
+    // handleRemoveClick: function () {
+        // this.model.destroy();
+        // return false;
+    // }
 });

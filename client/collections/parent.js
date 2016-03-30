@@ -1,8 +1,8 @@
 const Collection = require('ampersand-rest-collection');
-const Post = require('../models/post');
+const Comment = require('../models/comment');
 
 
 module.exports = Collection.extend({
-    model: Post,
-    url: 'http://jsonplaceholder.typicode.com/posts'
+    model: Comment,
+    url: 'http://jsonplaceholder.typicode.com/posts/1/comments'
 });
